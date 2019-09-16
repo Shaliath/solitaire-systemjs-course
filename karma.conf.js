@@ -27,20 +27,16 @@ module.exports = function (config) {
 
     browsers: ["Chrome", "Firefox"],
 
-    reporters: ['progress', 'junit'],
-
     plugins: [
       "karma-chrome-launcher",
       "karma-firefox-launcher",
       "karma-jasmine",
-      "karma-junit-reporter",
-      "karma-phantomjs-launcher",
-      "karma-safari-launcher"
+      "karma-junit-reporter"
     ],
 
     junitReporter: {
-      outputFile: "test-results.xml",
-      outputDir: "test-results"
+      outputFile: "test_out/unit.xml",
+      suite: "unit"
     }
 
   });
